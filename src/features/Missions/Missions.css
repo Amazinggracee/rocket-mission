@@ -1,0 +1,27 @@
+.missions {
+  padding: 25px;
+}
+
+table {
+  width: 100%;
+  border-right: 1px solid black;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+}
+
+tr:nth-child(odd) {
+  background-color: #d6eeee;
+}
+
+th {
+  background-color: white !important;
+  text-align: center;
+  padding: 20px;
+  border-left: 1px solid black;
+}
+
+td {
+  text-align: center;
+  padding: 20px;
+  border-left: 1px solid black;
+}
