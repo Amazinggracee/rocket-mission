@@ -1,0 +1,49 @@
+.rockets {
+  display: flex;
+  flex-direction: column;
+}
+
+/* .rocketimg {
+  height: 200px;
+  width: 100px;
+  aspect-ratio: calc(3 / 4);
+} */
+
+.rocketTile {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  margin-bottom: 8px;
+}
+
+.rocketDetails {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin-left: 20px;
+}
+
+.rocketName {
+  font-size: larger !important;
+}
+
+/* .rocketDescription {
+      margin-top: 10px;
+      margin-bottom: 10px;
+      font-size: smaller;
+      color: rgb(24, 66, 165);
+  } */
+
+.reserveButton {
+  all: unset;
+  padding: 8px;
+  text-align: center;
+  border-radius: 8px;
+  color: white;
+  background-color: rgb(24, 66, 165);
+}
+
+.reserveButton:hover {
+  cursor: pointer;
+  background-color: rgb(8, 67, 111);
+}

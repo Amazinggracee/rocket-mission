@@ -3,7 +3,7 @@ import thunk from 'redux-thunk';
 import logger from 'redux-logger';
 
 const reducer = combineReducers({
-// Add the code
+  // Add the code
 });
 const store = configureStore({
   reducer,
