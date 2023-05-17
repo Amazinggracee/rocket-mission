@@ -35,8 +35,8 @@ function Missions() {
                 </td>
                 <td>
                   {
-                elem.joined ? <p className="mstat member">A member</p> : <p className="mstat notmember">Not a member</p>
-                }
+                    elem.joined ? <p className="mstat member">A member</p> : <p className="mstat notmember">Not a member</p>
+                  }
 
                 </td>
                 <td><button type="button" onClick={() => dispatch(join(elem.mission_id))}>Join Mission</button></td>
