@@ -13,7 +13,7 @@ export const fetchRockets = createAsyncThunk('rockets/fetchRockets', () => axios
       rocket_id: rocket.rocket_id,
       rocket_img: rocket.flickr_images[0],
       rocket_name: rocket.rocket_name,
-      rocket_description: rocket.rocket_description,
+      rocket_description: rocket.description,
       reserved: false,
     }
   ))));
@@ -22,17 +22,25 @@ export const rocketSlice = createSlice({
   name: 'rockets',
   initialState,
   reducers: {
-    reserve: (state, action) => state.rockets.map((elem) => {
-      if (elem.rocket_id === action.payload) {
-        return { ...elem, reserved: !elem.reserved };
-      }
-      return elem;
-    }),
+    reserve: (state, action) => {
+      const temp = [];
+      state.rockets.forEach((rocket) => {
+        if (rocket.rocket_id === action.payload) {
+          temp.push({ ...rocket, reserved: !rocket.reserved });
+          // return { ...rocket, reserved: true };
+        } else {
+          temp.push(rocket);
+        }
+        // return rocket;
+      });
+      return { ...state, rockets: temp };
+    },
+
   },
   extraReducers: (builder) => {
     builder.addCase(fetchRockets.pending, (state) => ({ ...state, loading: true }));
     builder.addCase(fetchRockets.fulfilled, (state, action) => ({
-      ...state, loading: true, rockets: action.payload, error: '',
+      ...state, loading: false, rockets: action.payload, error: '',
     }));
   },
 });
