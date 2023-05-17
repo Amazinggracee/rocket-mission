@@ -1,37 +1,28 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './Rockets.css';
+import { useSelector, useDispatch } from 'react-redux';
+import { fetchRockets } from './rocketSlice';
 
 function Rockets() {
-  const comp = [
-    {
-      uname: 'Falcon 9',
-      des: 'loremsfdnfiojnfkjds',
-      url: 'planet.png',
-      index: 1,
-      reserved: false,
-    },
-    {
-      uname: 'Falcon 19',
-      des: 'loremsfdnfiojnfkjds',
-      url: 'planet.png',
-      index: 2,
-      reserved: true,
-    },
-  ];
-
+  const comp = useSelector((state) => state.rockets.rockets);
+  console.log(comp);
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(fetchRockets());
+  }, []);
   return (
     <div className="rockets">
       {
-        comp.map((elem) => (
-          <div key={elem.index} className="rocketTile">
-            <img src={elem.url} alt="" className="rocketimg" />
-            <div className="rocketDetails">
-              <h2 className="rocketName">{elem.uname}</h2>
-              <p className="rocketDescription">{elem.des}</p>
-              <button disabled={elem.reserved} onClick={() => { console.log(elem.uname); }} type="button" className="reserveButton">Reserve Rocket</button>
-            </div>
+      comp.map((elem) => (
+        <div key={elem.rocket_id} className="rocketTile">
+          <img src={elem.rocket_img} alt="" className="rocketimg" />
+          <div className="rocketDetails">
+            <h2 className="rocketName">{elem.rocket_name}</h2>
+            <p className="rocketDescription">{elem.rocket_description}</p>
+            <button disabled={elem.reserved} onClick={() => { }} type="button" className="reserveButton">Reserve Rocket</button>
           </div>
-        ))
+        </div>
+      ))
       }
     </div>
   );
