@@ -22,18 +22,21 @@ export const missionSlice = createSlice({
   initialState,
   reducers: {
     join: (state, action) => {
-      state.missions.map((elem) => {
+      const temp = [];
+      state.missions.forEach((elem) => {
         if (elem.mission_id === action.payload) {
-          return { ...elem, joined: true };
+          temp.push({ ...elem, joined: !elem.joined });
+        } else {
+          temp.push(elem);
         }
-        return elem;
       });
+      return { ...state, missions: temp };
     },
   },
   extraReducers: (builder) => {
     builder.addCase(fetchMissions.pending, (state) => ({ ...state, loading: true }));
     builder.addCase(fetchMissions.fulfilled, (state, action) => ({
-      ...state, loading: true, missions: action.payload, error: '',
+      ...state, loading: false, missions: action.payload, error: '',
     }));
   },
 });
