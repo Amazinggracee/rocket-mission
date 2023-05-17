@@ -1,27 +1,14 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './Missions.css';
+import { useSelector, useDispatch } from 'react-redux';
+import { fetchMissions, join } from './missionSlice';
 
 function Missions() {
-  const missions = [
-    {
-      id: 1,
-      mission_name: 'mars',
-      mission_description: 'dffffffffffffffffffffffffffff',
-      joined: false,
-    },
-    {
-      id: 2,
-      mission_name: 'mars',
-      mission_description: 'dffffffffffffffffffffffffffff',
-      joined: false,
-    },
-    {
-      id: 3,
-      mission_name: 'mars',
-      mission_description: 'dffffffffffffffffffffffffffff',
-      joined: false,
-    },
-  ];
+  const missions = useSelector((state) => state.missions.missions);
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(fetchMissions());
+  }, []);
   return (
     <div className="missions">
       <table cellPadding="0" cellSpacing="0">
@@ -36,11 +23,23 @@ function Missions() {
         <tbody>
           {
             missions.map((elem) => (
-              <tr key={elem.id}>
+              <tr key={elem.mission_id}>
                 <td>{elem.mission_name}</td>
-                <td>{elem.mission_description}</td>
-                <td>{elem.joined}</td>
-                <td><button type="button">Join Mission</button></td>
+                <td>
+                  {' '}
+                  <p>
+                    {' '}
+                    {elem.mission_description}
+                    {' '}
+                  </p>
+                </td>
+                <td>
+                  {
+                elem.joined ? <p className="mstat member">A member</p> : <p className="mstat notmember">Not a member</p>
+                }
+
+                </td>
+                <td><button type="button" onClick={() => dispatch(join(elem.mission_id))}>Join Mission</button></td>
               </tr>
             ))
           }
