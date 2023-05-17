@@ -14,7 +14,7 @@
   flex-direction: column;
   text-align: start;
   width: 45%;
-  height: fit-content;
+  height: max-content;
 }
 
 .itemlist {
