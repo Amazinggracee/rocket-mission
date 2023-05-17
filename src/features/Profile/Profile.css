@@ -1,3 +1,31 @@
-.background {
-  background-color: #fff;
+.profile {
+  display: flex;
+  justify-content: space-around;
+}
+
+.listtitle {
+  margin-bottom: 8px;
+  padding: 0;
+  font-size: xx-large;
+}
+
+.listbox {
+  display: flex;
+  flex-direction: column;
+  text-align: start;
+  width: 45%;
+}
+
+.itemlist {
+  all: unset;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  border: 1px solid rgb(48, 41, 41);
+}
+
+.listitems {
+  border: 1px solid black;
+  list-style: none;
+  font-size: x-large;
 }
