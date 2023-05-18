@@ -64,6 +64,7 @@ td button {
 
 .leavebtn {
   border: 2px solid red;
+  color: red;
 }
 
 .joinbtn {
