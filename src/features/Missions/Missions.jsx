@@ -9,7 +9,7 @@ function Missions() {
   const dispatch = useDispatch();
   useEffect(() => {
     if (missions.length === 0) dispatch(fetchMissions());
-  }, []);
+  }, [dispatch, missions]);
   if (loading) {
     return <div>Loading...</div>;
   } return (
@@ -27,7 +27,7 @@ function Missions() {
           {
             missions.map((elem) => (
               <tr key={elem.mission_id}>
-                <td>{elem.mission_name}</td>
+                <td className="mission-name">{elem.mission_name}</td>
                 <td>
                   {' '}
                   <p>
@@ -38,7 +38,7 @@ function Missions() {
                 </td>
                 <td>
                   {
-                elem.joined ? <p className="mstat member">A member</p> : <p className="mstat notmember">Not a member</p>
+                elem.joined ? <p className="mstat member">ACTIVE MEMBER</p> : <p className="mstat notmember">NOT A MEMBER</p>
                 }
 
                 </td>

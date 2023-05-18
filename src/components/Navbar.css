@@ -17,6 +17,8 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  border-bottom: 1px solid #5e6062;
+  padding-bottom: 1em;
 }
 
 .navtitle {
@@ -25,17 +27,22 @@
 }
 
 .logo {
-  height: 80px;
+  height: 50px;
+}
+
+.logo-title {
+  font-size: 26px;
+  padding-left: 10px;
 }
 
 .menu {
   padding-right: 80px;
-  color: aqua;
+  color: #1e87ff;
 }
 
 .navitems {
   all: unset;
-  padding: 6px;
+  padding: 4px 15px;
 }
 
 .navitems:hover {
@@ -46,4 +53,13 @@
 
 .navitems a.active {
   text-decoration: underline;
+}
+
+.profile {
+  border-left: 1px solid #5e6062;
+}
+
+.listTitle {
+  font-size: 22px;
+  font-weight: lighter;
 }
