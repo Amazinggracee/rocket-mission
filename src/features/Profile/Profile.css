@@ -22,11 +22,11 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  border: 1px solid blue;
+  border: 1px solid rgb(101, 101, 103);
 }
 
 .listitems {
-  border: 1px solid black;
+  border: 1px solid rgb(101, 101, 103);
   list-style: none;
   font-size: larger;
   height: auto;
