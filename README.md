@@ -54,7 +54,7 @@ In order to run this project you need
 
 Clone this repository to your desired folder:
 
-git clone https://github.com/Naledi-Dikgale/bookstore-setup.git
+git clone (https://github.com/Amazinggracee/rocket-mission)
 
 ### Install
 
