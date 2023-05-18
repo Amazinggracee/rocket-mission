@@ -26,7 +26,7 @@
 
 # 📖 Space Travelers' Hub <a name="about-project"></a>
 
-**Space Travelers' Hub** 
+**Space Travelers' Hub**  "Space Travelers hub" is aa web application for a company that provides commercial and scientific space travel services. The application will allow users to book rockets and join selected space missions.
 
 ## 🛠 Built With <a name="built-with">Create React App</a>
 
@@ -136,6 +136,6 @@ If you like this project give a star to this repositiory.
 
 ## 📝 License <a name="license"></a>
 
-This project is [MIT](https://github.com/Amazinggracee/rocket-mission/blob/dev/LICENSE) licensed.
+This project is [MIT](/LICENSE.md) licensed.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
