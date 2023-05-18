@@ -18,7 +18,7 @@
 .reserved {
   margin-right: 10px;
   font-size: medium;
-  background-color: rgb(51, 87, 219);
+  background-color: rgb(33, 168, 185);
   color: white;
   width: fit-content;
   width: -moz-fit-content;
@@ -72,5 +72,5 @@
 }
 
 .reserve {
-  background-color: rgb(16, 77, 168);
+  background-color: rgb(33, 168, 185);
 }
