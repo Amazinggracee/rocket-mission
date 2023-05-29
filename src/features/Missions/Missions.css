@@ -70,3 +70,17 @@ td button {
 .joinbtn {
   border: 2px solid rgb(70, 72, 72);
 }
+
+
+@media screen and (max-width: 767px) {
+  /* Styles for small screens */
+  table {
+    width: 100%;
+  }
+
+  th,
+  td {
+    padding: 10px;
+    font-size: 14px;
+  }
+}
