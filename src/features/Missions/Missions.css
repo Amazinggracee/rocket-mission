@@ -71,7 +71,6 @@ td button {
   border: 2px solid rgb(70, 72, 72);
 }
 
-
 @media screen and (max-width: 767px) {
   /* Styles for small screens */
   table {
