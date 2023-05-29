@@ -1,0 +1,85 @@
+:root {
+  --border: 1px solid #5e6062;
+}
+
+.missions {
+  padding: 25px;
+  display: flex;
+  justify-content: center;
+}
+
+.mission-name {
+  font-weight: bold;
+}
+
+table {
+  width: 90%;
+  border-right: var(--border);
+  border-top: var(--border);
+}
+
+tr:nth-child(odd) {
+  background-color: #f1f2f2;
+}
+
+th {
+  background-color: white !important;
+  text-align: center;
+  padding: 20px;
+  border-left: var(--border);
+  border-bottom: var(--border);
+}
+
+td {
+  padding: 20px;
+  border-left: var(--border);
+  border-bottom: var(--border);
+}
+
+.mstatus {
+  width: max-content;
+}
+
+td button {
+  width: max-content;
+  padding: 8px;
+  border-radius: 5px;
+}
+
+.mstat {
+  border-radius: 5px;
+  padding: 5px;
+  width: max-content;
+  color: white;
+  font-weight: bold;
+}
+
+.member {
+  background-color: rgb(33, 168, 185);
+}
+
+.notmember {
+  background-color: rgb(70, 72, 72);
+}
+
+.leavebtn {
+  border: 2px solid red;
+  color: red;
+}
+
+.joinbtn {
+  border: 2px solid rgb(70, 72, 72);
+}
+
+@media screen and (max-width: 767px) {
+  /* Styles for small screens */
+  table {
+    width: 100%;
+  }
+
+  th,
+  td {
+    padding: 10px;
+    font-size: 14px;
+  }
+}

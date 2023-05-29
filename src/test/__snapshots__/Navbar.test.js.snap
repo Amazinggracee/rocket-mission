@@ -1,0 +1,67 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders  Rocket correctly 1`] = `
+<div>
+  Loading...
+</div>
+`;
+
+exports[`renders  mission correctly 1`] = `
+<div
+  className="missions"
+>
+  <table
+    cellPadding="0"
+    cellSpacing="0"
+  >
+    <thead>
+      <tr>
+        <th>
+          Mission
+        </th>
+        <th>
+          Description
+        </th>
+        <th>
+          Status
+        </th>
+        <th>
+           
+        </th>
+      </tr>
+    </thead>
+    <tbody />
+  </table>
+</div>
+`;
+
+exports[`renders  profile correctly 1`] = `
+<div
+  className="profile"
+>
+  <div
+    className="listbox"
+  >
+    <h2
+      className="listtitle"
+    >
+      My Missions
+    </h2>
+    <ul
+      className="itemlist"
+    />
+  </div>
+  <div
+    className="listbox"
+  >
+    <h2
+      className="listtitle"
+    >
+      My Rockets
+    </h2>
+    <ul
+      className="itemlist"
+    />
+  </div>
+</div>
+`;
